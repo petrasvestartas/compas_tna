@@ -1,0 +1,20 @@
+name: Draft PDF
+
+on:
+  push:
+    paths:
+      - "paper/**"
+      - ".github/workflows/draft-pdf.yml"
+  workflow_dispatch:
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build JOSS draft PDF
+        uses: openjournals/openjournals-draft-action@v2
+        with:
+          journal: joss
+          paper-path: paper/paper.md
