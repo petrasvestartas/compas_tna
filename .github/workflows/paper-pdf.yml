@@ -1,0 +1,25 @@
+# Build a production (non-draft) PDF using inara with the -p flag
+name: Paper PDF
+on:
+  workflow_dispatch:
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    name: Paper Production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build production PDF
+        uses: docker://openjournals/inara:latest
+        env:
+          JOURNAL: joss
+        with:
+          args: -p -o pdf paper/paper.md
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-production
+          path: paper/paper.pdf
