@@ -12,7 +12,7 @@ authors:
     equal-contrib: true
     affiliation: 1
   - name: Li Chen
-    orcid: 0000-0002-0018-8096
+    orcid: 0009-0001-1520-9064
     equal-contrib: false
     affiliation: 1
   - name: Juney Lee
@@ -32,7 +32,7 @@ bibliography: paper.bib
 
 # Summary
 
-Thrust Network Analysis (TNA) is a method rooted in graphic statics that determines the equilibrium form of spatial networks of compressive forces subjected to vertical loads at their nodes. This study introduces a new approach for creating compression-only vaulted surfaces and structural networks. The technique identifies feasible funicular configurations under gravity within a prescribed boundary. By combining projective geometry, duality principles, and linear optimization, it delivers a visual and intuitive framework that retains the benefits of graphic statics while extending them to fully three-dimensional cases. The method can be applied both to the structural assessment of historic vaulted masonry and to the design of modern vaulted systems. This paper presents the approach and illustrates its use through practical examples in both contexts ![COMPAS TNA framework overview.\label{fig:compas-tna}](compas_tna.png).
+Thrust Network Analysis (TNA) is a method rooted in graphic statics that determines the equilibrium form of spatial networks of compressive forces subjected to vertical loads at their nodes. This study introduces a new approach for creating compression-only vaulted surfaces and structural networks. The technique identifies feasible funicular configurations under gravity within a prescribed boundary. By combining projective geometry, duality principles, and linear optimization, it delivers a visual and intuitive framework that retains the benefits of graphic statics while extending them to fully three-dimensional cases. The method can be applied both to the structural assessment of historic vaulted masonry and to the design of modern vaulted systems. This paper presents the approach and illustrates its use through practical examples in both contexts \autoref{fig:compas-tna}.
 
 
 # Statement of need
@@ -42,6 +42,8 @@ Thrust Network Analysis (TNA) is a method rooted in graphic statics that determi
 The package builds upon established theoretical foundations in graphic statics and funicular form-finding [@Block2016]. It provides tools for exploring the solution space of structural design through geometry-based understanding of structures [@VanMele2012]. The implementation supports both educational applications and advanced research in funicular shell design exploration [@Rippmann2013], as illustrated in \autoref{fig:compas-tna}.
 
 `COMPAS TNA` was designed to be used by both structural engineering researchers and students in courses on computational design and structural analysis. The combination of intuitive geometric methods with robust numerical implementations enables accessible yet powerful exploration of compression-only structural systems within the broader COMPAS ecosystem.
+
+![COMPAS TNA framework overview.\label{fig:compas-tna}](compas_tna.png)
 
 <!-- # Mathematics
 
@@ -87,9 +89,9 @@ For a quick reference, the following figure commands can be used:
 Figure sizes can be customized by adding an optional second parameter:
 ![COMPAS TNA framework overview.](../compas_tna.png){ width=50% } -->
 
-# Figures
+<!-- # Figures -->
 
-![COMPAS TNA framework overview.\label{fig:compas-tna}](compas_tna.png)
+
 
 <!-- # Acknowledgements
 
