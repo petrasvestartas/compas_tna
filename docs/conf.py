@@ -160,13 +160,15 @@ html_compact_lists = True
 
 extensions += ["sphinxcontrib.bibtex", "myst_parser"]
 
-# Add custom extension path
+# Add custom extension path (paper-specific)
 import sys
 import os
+# Support extension in either location during migration
+sys.path.insert(0, os.path.abspath('paper'))
 sys.path.insert(0, os.path.abspath('_ext'))
 extensions.append('paper_content')
-# Bibliography configuration
-bibtex_bibfiles = ["paper.bib"]
+# Bibliography configuration (support both locations during migration)
+bibtex_bibfiles = ["paper/paper.bib", "paper.bib"]
 bibtex_default_style = "unsrtalpha"
 bibtex_reference_style = "author_year"
 

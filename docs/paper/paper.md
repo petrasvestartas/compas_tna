@@ -27,7 +27,7 @@ affiliations:
     index: 2
     ror: 05x2bcf33
 date: 20 August 2025  
-bibliography: ../docs/paper.bib
+bibliography: paper.bib
 ---
 
 <!-- SUMMARY-START -->
@@ -44,7 +44,9 @@ The practical significance of this methodology has been demonstrated through sof
 
 The need for such a framework is particularly acute in the context of education and research. Students in architecture and engineering can struggle to grasp the invisible flow of forces within structures when relying solely on equations or FEA outputs, whereas TNA-based tools make these flows explicit by encoding them in reciprocal geometry. This geometric transparency not only enhances comprehension but also empowers learners to experiment, fail, and iterate rapidly without losing sight of equilibrium constraints. At the research level, the ability to parametrize reciprocal diagrams and link them to optimization routines opens new pathways for generating novel funicular geometries and hybrid compression–tension systems, extending beyond the canonical vault or dome. In practice, the implications are equally significant: the integration of TNA into design workflows provides a lightweight but rigorous front-end for structural conception, complementing downstream finite element checks rather than replacing them. By constraining the design space to admissible equilibrium geometries under vertical loading, the approach ensures that candidate forms are structurally sound from the outset, reducing inefficiencies in iteration between architects and engineers. Moreover, the implementation of TNA in accessible packages such as RhinoVAULT demonstrates that these methods can be disseminated widely as free tools, supporting both professional experimentation and educational adoption. This democratization of structural intuition aligns with the broader movement in computational design towards open, scriptable, and reproducible frameworks. Ultimately, the continued development of TNA-based tools fulfills a pressing need: to bridge the divide between geometry, structure, and fabrication in a way that is both rigorous and intuitive, enabling the collaborative exploration of efficient, expressive, and buildable compression-only forms [@Block2016; @Rippmann2013].
 
-![COMPAS TNA framework overview.\label{fig:compas-tna}](../compas_tna.png)
+<!-- STATEMENT-END -->
+
+![COMPAS TNA framework overview.\label{fig:compas-tna}](../../compas_tna.png)
 
 
 <!-- # Mathematics

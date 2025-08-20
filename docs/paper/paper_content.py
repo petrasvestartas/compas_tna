@@ -21,15 +21,20 @@ class PaperContentDirective(SphinxDirective):
     def run(self):
         # Get the paper.md file path
         source_dir = self.env.srcdir
-        paper_path = os.path.join(source_dir, 'paper.md')
+        # Support both new and old locations
+        candidate_paths = [
+            os.path.join(source_dir, 'paper', 'paper.md'),
+            os.path.join(source_dir, 'paper.md'),
+        ]
+        paper_path = next((p for p in candidate_paths if os.path.exists(p)), None)
 
         # Which section to extract
         section = (self.options.get('section') or '').strip().lower()
         if section not in ('summary', 'statement'):
             return [nodes.warning(None, nodes.Text("paper-content: option :section: must be 'summary' or 'statement'"))]
 
-        if not os.path.exists(paper_path):
-            return [nodes.warning(None, nodes.Text(f"paper.md not found at {paper_path}"))]
+        if not paper_path:
+            return [nodes.warning(None, nodes.Text("paper.md not found (looked in docs/paper/paper.md and docs/paper.md)"))]
 
         # Read the paper.md content
         with open(paper_path, 'r', encoding='utf-8') as f:
