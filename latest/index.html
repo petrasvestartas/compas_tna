@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="_static/compas.ico" type="image/x-icon">
     <title>COMPAS TNA &#8212; COMPAS TNA</title>
   
@@ -29,29 +28,32 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/compas.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/css/compas.css?v=617b33e2" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/tabs.js"></script>
+    <script src="_static/documentation_options.js?v=bb99e320"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://raw.githubusercontent.com/blockresearchgroup/compas_tna/gh-pages/versions.json';
@@ -518,9 +520,43 @@ document.write(`
 <figure class="figure align-default">
 <img alt="_images/compas_tna.png" class="figure-img img-fluid" src="_images/compas_tna.png" />
 </figure>
-<p class="lead">Thrust Network Analysis (TNA) is a graphic statics-based method for finding the
-shape of a spatial network of compressive forces in equilibrium with vertical loads applied
-to its vertices.</p>
+<section id="summary">
+<h2>Summary</h2>
+<p>Thrust Network Analysis (TNA) is a graphic statics-based method based on COMPAS Python framework for finding the shape of a spatial network of compressive forces in equilibrium with vertical loads applied to its vertices. Traditional approaches to vaulted or shell structures have historically relied on physical models such as hanging chains or cloth experiments, exemplified by the works of Gaudí, Otto, and Isler, or on graphical methods of equilibrium design such as those employed by the Guastavinos. While these methods are powerful for revealing the natural logic of compression-only forms, they are also time-consuming, locally constrained, and lack global control, limiting their application in contemporary design environments. TNA addresses these limitations by explicitly representing equilibrium through a form diagram and its reciprocal force diagram, linked by the spatial thrust network. The designer can manipulate either diagram to steer both form and force, ensuring that equilibrium is maintained while exploring highly indeterminate structural configurations. This bidirectional control over geometry and internal force distribution allows the exploration of vaults with openings, oculi, folds, open-edge arches, or continuous tension ties, which would be cumbersome or even impossible to design with purely numerical or physical methods <span id="id1">[<a class="reference internal" href="#id10" title="M. Rippmann, L. Lachauer, and P. Block. Interactive vault design. International Journal of Space Structures, 27(4):219-230, December 2012. doi:10.1260/0266-3511.27.4.219.">Rippmann <em>et al.</em>, 2012</a>, <a class="reference internal" href="#id11" title="T. Van Mele, L. Lachauer, M. Rippmann, and P. Block. Geometry-based understanding of structures. Journal of the International Association of Shell and Spatial Structures, 53(4):285-295, 2012.">Van Mele <em>et al.</em>, 2012</a>]</span>. What makes TNA particularly significant is its dual emphasis between form and force diagrams. The diagrams provide immediate visual feedback about axial forces and equilibrium conditions, while the underlying algorithms enforce structural validity, meaning that the designer’s creative intent is grounded in a precise mathematical framework.</p>
+<p>The practical significance of this methodology has been demonstrated through software implementations such as RhinoVAULT, which embed the TNA framework into interactive design tools. These tools provide real-time feedback, enabling designers to intuitively manipulate reciprocal diagrams while observing their spatial consequences in the thrust network. Operations such as local attraction of forces, modification of support conditions, or redistribution of horizontal thrust can be carried out visually and playfully, yet remain structurally sound because the solver continuously enforces equilibrium constraints <span id="id2">[<a class="reference internal" href="#id9" title="M. Rippmann and P. Block. Funicular shell design exploration. In Proceedings of the 33rd Annual Conference of the ACADIA. Waterloo/Buffalo/Nottingham, Canada, September 2013.">Rippmann and Block, 2013</a>]</span>. Importantly, the feedback loop between the designer and the computational engine fosters a deeper structural intuition by making the flow of forces transparent: the lengths of edges in the force diagram directly correspond to the magnitudes of axial forces, while closed polygons represent local equilibrium. This makes the relationship between form and force legible to both engineers and architects, allowing them to collaborate effectively during the earliest stages of design. Case studies have validated this approach in both educational and practical contexts. Student workshops using RhinoVAULT have demonstrated how novices can rapidly generate structurally informed vaults and shells, while built prototypes such as full-scale thin-tile vaults or digitally fabricated foam shells confirm that the discovered forms are not only structurally valid but also constructible <span id="id3">[<a class="reference internal" href="#id8" title="P. Block, T. Van Mele, and M. Rippmann. Geometry of forces: exploring the solution space of structural design. GAM, 12:28-37, April 2016. Special issue S. Peters and A. Trummer (Eds.) - 'Structural Affairs'.">Block <em>et al.</em>, 2016</a>]</span>. These applications underscore that TNA is more than a numerical solver; it is a design philosophy and visual language for equilibrium that situates geometry at the heart of structural thinking, bridging the conceptual divide between historical craft traditions and contemporary computational design practices.</p>
+</section>
+<section id="statement-of-need">
+<h2>Statement of need</h2>
+<p>Despite the rapid expansion of computational design and finite element analysis (FEA) in architectural practice, early-stage structural form finding remains dominated by either black-box optimization routines or heuristic, trial-and-error modeling, both of which limit the designer’s ability to explore equilibrium structures in a transparent and creative way. Current workflows typically separate the processes of design and analysis: architects model a geometry based on aesthetic considerations, and engineers then evaluate or post-rationalize it using numerical solvers. This division often obscures the crucial relationship between form and force, resulting in designs that either fail to capitalize on the efficiency of funicular geometries or require costly reinforcement strategies. On the other hand, physical methods such as hanging chain models offer immediacy and clarity but are not readily reproducible, globally controllable, or easily integrated into digital workflows. This gap creates a clear need for tools that allow both architects and engineers to simultaneously explore spatial form and structural logic through a common, intuitive language. TNA addresses this need by making equilibrium itself the medium of design. By embedding reciprocal diagrams and thrust networks within interactive software environments, the designer gains real-time, bi-directional control of form and forces, turning what is traditionally a specialist’s analysis into a broadly accessible, exploratory design process <span id="id4">[<a class="reference internal" href="#id10" title="M. Rippmann, L. Lachauer, and P. Block. Interactive vault design. International Journal of Space Structures, 27(4):219-230, December 2012. doi:10.1260/0266-3511.27.4.219.">Rippmann <em>et al.</em>, 2012</a>, <a class="reference internal" href="#id11" title="T. Van Mele, L. Lachauer, M. Rippmann, and P. Block. Geometry-based understanding of structures. Journal of the International Association of Shell and Spatial Structures, 53(4):285-295, 2012.">Van Mele <em>et al.</em>, 2012</a>]</span>.</p>
+<p>The need for such a framework is particularly acute in the context of education and research. Students in architecture and engineering can struggle to grasp the invisible flow of forces within structures when relying solely on equations or FEA outputs, whereas TNA-based tools make these flows explicit by encoding them in reciprocal geometry. This geometric transparency not only enhances comprehension but also empowers learners to experiment, fail, and iterate rapidly without losing sight of equilibrium constraints. At the research level, the ability to parametrize reciprocal diagrams and link them to optimization routines opens new pathways for generating novel funicular geometries and hybrid compression–tension systems, extending beyond the canonical vault or dome. In practice, the implications are equally significant: the integration of TNA into design workflows provides a lightweight but rigorous front-end for structural conception, complementing downstream finite element checks rather than replacing them. By constraining the design space to admissible equilibrium geometries under vertical loading, the approach ensures that candidate forms are structurally sound from the outset, reducing inefficiencies in iteration between architects and engineers. Moreover, the implementation of TNA in accessible packages such as RhinoVAULT demonstrates that these methods can be disseminated widely as free tools, supporting both professional experimentation and educational adoption. This democratization of structural intuition aligns with the broader movement in computational design towards open, scriptable, and reproducible frameworks. Ultimately, the continued development of TNA-based tools fulfills a pressing need: to bridge the divide between geometry, structure, and fabrication in a way that is both rigorous and intuitive, enabling the collaborative exploration of efficient, expressive, and buildable compression-only forms <span id="id5">[<a class="reference internal" href="#id9" title="M. Rippmann and P. Block. Funicular shell design exploration. In Proceedings of the 33rd Annual Conference of the ACADIA. Waterloo/Buffalo/Nottingham, Canada, September 2013.">Rippmann and Block, 2013</a>, <a class="reference internal" href="#id8" title="P. Block, T. Van Mele, and M. Rippmann. Geometry of forces: exploring the solution space of structural design. GAM, 12:28-37, April 2016. Special issue S. Peters and A. Trummer (Eds.) - 'Structural Affairs'.">Block <em>et al.</em>, 2016</a>]</span>.</p>
+<section id="references">
+<h3>References</h3>
+<div class="docutils container" id="id6">
+<div role="list" class="citation-list">
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RLB12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>M. Rippmann, L. Lachauer, and P. Block. Interactive vault design. <em>International Journal of Space Structures</em>, 27(4):219–230, December 2012. <a class="reference external" href="https://doi.org/10.1260/0266-3511.27.4.219">doi:10.1260/0266-3511.27.4.219</a>.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>VMLRB12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>T. Van Mele, L. Lachauer, M. Rippmann, and P. Block. Geometry-based understanding of structures. <em>Journal of the International Association of Shell and Spatial Structures</em>, 53(4):285–295, 2012.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>RB13<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>M. Rippmann and P. Block. Funicular shell design exploration. In <em>Proceedings of the 33rd Annual Conference of the ACADIA</em>. Waterloo/Buffalo/Nottingham, Canada, September 2013.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BVMR16<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>P. Block, T. Van Mele, and M. Rippmann. Geometry of forces: exploring the solution space of structural design. <em>GAM</em>, 12:28–37, April 2016. Special issue S. Peters and A. Trummer (Eds.) - 'Structural Affairs'.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="table-of-contents">
 <h2>Table of Contents</h2>
 <div class="toctree-wrapper compound">
@@ -568,6 +604,11 @@ to its vertices.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-of-need">Statement of need</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 </ul>
   </nav></div>
@@ -604,7 +645,7 @@ to its vertices.</p>
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
