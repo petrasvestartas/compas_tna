@@ -1,5 +1,5 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'COMPAS-TNA: Thrust Network Analysis for form-finding of compression-only structures'
 tags:
   - Python
   - COMPAS
