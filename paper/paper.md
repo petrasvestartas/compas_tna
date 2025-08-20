@@ -87,6 +87,10 @@ For a quick reference, the following figure commands can be used:
 Figure sizes can be customized by adding an optional second parameter:
 ![COMPAS TNA framework overview.](../compas_tna.png){ width=50% } -->
 
+# Figures
+
+![COMPAS TNA framework overview.\label{fig:compas-tna}](compas_tna.png)
+
 <!-- # Acknowledgements
 
 We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
