@@ -1,45 +1,95 @@
 ---
-title: 'COMPAS TNA: Thrust Network Analysis in COMPAS'
+title: 'Gala: A Python package for galactic dynamics'
 tags:
   - Python
-  - structural engineering
-  - form finding
-  - thrust network analysis
-  - compas
+  - COMPAS
+  - form-finding
+  - thrust-network-analysis
+  - funicular-structures
 authors:
-  - name: Full Name
-    orcid: 0000-0000-0000-0000
+  - name: Tom Van Mele
+    orcid: 0000-0002-4614-1808
+    equal-contrib: true
     affiliation: 1
+  - name: Li Chen
+    orcid: 0000-0002-0018-8096
+    equal-contrib: false
+    affiliation: 1
+  - name: Juney Lee
+    orcid: 0000-0003-4077-0205
+    corresponding: false
+    affiliation: 2
 affiliations:
-  - name: Institution Name, Country
+  - name: Block Research Group (BRG), Institute of Technology in Architecture (ITA), ETH Zürich, Switzerland
     index: 1
-# Set the submission date (optional)
-date: 19 August 2025
+    ror: 05a28rw58
+  - name: Carnegie Mellon University, United States
+    index: 2
+    ror: 05x2bcf33
+date: 20 August 2025  
 bibliography: paper.bib
 ---
 
 # Summary
 
-[Replace with ~2–4 sentences for a non-specialist audience.]  
-COMPAS TNA provides Thrust Network Analysis (TNA) for discrete funicular form finding within the COMPAS computational framework. It enables structural designers and researchers to model and explore compression-only structures using a consistent Python API and interoperable data structures.
+Thrust Network Analysis (TNA) is a method rooted in graphic statics that determines the equilibrium form of spatial networks of compressive forces subjected to vertical loads at their nodes. This study introduces a new approach for creating compression-only vaulted surfaces and structural networks. The technique identifies feasible funicular configurations under gravity within a prescribed boundary. By combining projective geometry, duality principles, and linear optimization, it delivers a visual and intuitive framework that retains the benefits of graphic statics while extending them to fully three-dimensional cases. The method can be applied both to the structural assessment of historic vaulted masonry and to the design of modern vaulted systems. This paper presents the approach and illustrates its use through practical examples in both contexts ![COMPAS TNA framework overview.\label{fig:compas-tna}](compas_tna.png).
+
 
 # Statement of need
 
-[What problem it solves, who it is for, and relation to existing work.]  
-Designing compression-only structures requires numerical methods to satisfy equilibrium under given loads and geometric constraints. Existing solutions are fragmented or tied to specific environments. COMPAS TNA offers an open, Pythonic implementation integrated with the COMPAS ecosystem, enabling reproducible research and extensible workflows in structural design and education.
+`COMPAS TNA` is a Python package for Thrust Network Analysis within the COMPAS computational framework. Python enables wrapping low-level numerical libraries for speed without losing flexibility or ease-of-use in the user interface. The API for `COMPAS TNA` was designed to provide a class-based and user-friendly interface to efficient implementations of common operations in structural form-finding, including equilibrium computation, force density methods, and interactive vault design [@Rippmann2012].
 
-# State of the field
+The package builds upon established theoretical foundations in graphic statics and funicular form-finding [@Block2016]. It provides tools for exploring the solution space of structural design through geometry-based understanding of structures [@VanMele2012]. The implementation supports both educational applications and advanced research in funicular shell design exploration [@Rippmann2013], as illustrated in \autoref{fig:compas-tna}.
 
-[How this compares to commonly used packages.]  
-Summarize comparable tools (e.g., academic prototypes, commercial plugins) and explain differences in scope, openness, extensibility, and interoperability (e.g., integration with COMPAS, scripting, data model).
+`COMPAS TNA` was designed to be used by both structural engineering researchers and students in courses on computational design and structural analysis. The combination of intuitive geometric methods with robust numerical implementations enables accessible yet powerful exploration of compression-only structural systems within the broader COMPAS ecosystem.
 
-# Use cases
+<!-- # Mathematics
 
-[Ongoing research projects, classes, or publications enabled by this software.]  
-Briefly list 2–3 representative examples and links if available.
+Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
 
-# Acknowledgements
+Double dollars make self-standing equations:
 
-[Optional: funding, collaborators, data providers.]
+$$\Theta(x) = \left\{\begin{array}{l}
+0\textrm{ if } x < 0\cr
+1\textrm{ else}
+\end{array}\right.$$
+
+You can also use plain \LaTeX for equations
+\begin{equation}\label{eq:fourier}
+\hat f(\omega) = \int_{-\infty}^{\infty} f(x) e^{i\omega x} dx
+\end{equation}
+and refer to \autoref{eq:fourier} from text. -->
+
+<!-- # Citations
+
+Citations to entries in paper.bib should be in
+[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+format.
+
+If you want to cite a software repository URL (e.g. something on GitHub without a preferred
+citation) then you can do it with the example BibTeX entry below for @fidgit.
+
+For a quick reference, the following citation commands can be used:
+- `@author:2001`  ->  "Author et al. (2001)"
+- `[@author:2001]` -> "(Author et al., 2001)"
+- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)" -->
+
+<!-- # Figures
+
+Figures can be included like this:
+![COMPAS TNA framework overview.\label{fig:compas-tna}](../compas_tna.png)
+and referenced from text using \autoref{fig:compas-tna}.
+
+For a quick reference, the following figure commands can be used:
+- `\autoref{fig:compas-tna}` -> "Figure 1"
+- `\ref{fig:compas-tna}` -> "1"
+
+Figure sizes can be customized by adding an optional second parameter:
+![COMPAS TNA framework overview.](../compas_tna.png){ width=50% } -->
+
+<!-- # Acknowledgements
+
+We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
+Oh, and support from Kathryn Johnston during the genesis of this project. -->
 
 # References
