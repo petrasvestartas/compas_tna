@@ -6,6 +6,7 @@ import re
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from sphinx.util.docutils import SphinxDirective
+from sphinx.util.nodes import nested_parse_with_titles
 
 
 class PaperContentDirective(SphinxDirective):
@@ -125,7 +126,8 @@ class PaperContentDirective(SphinxDirective):
 
         container = nodes.container()
         try:
-            self.state.nested_parse(content_stringlist, 0, container)
+            # Allow section titles within directive content
+            nested_parse_with_titles(self.state, content_stringlist, container)
             return list(container.children)
         except Exception as e:
             return [nodes.warning(None, nodes.Text(f"Error parsing content: {e}"))]

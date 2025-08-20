@@ -14,7 +14,9 @@ organization = "blockresearchgroup"
 master_doc = "index"
 source_suffix = {".rst": "restructuredtext", ".md": "myst"}
 templates_path = sphinx_compas2_theme.get_autosummary_templates_path()
-exclude_patterns = sphinx_compas2_theme.default_exclude_patterns
+exclude_patterns = sphinx_compas2_theme.default_exclude_patterns + [
+    'paper/paper.md',  # build via custom directive, not as a standalone page
+]
 add_module_names = True
 language = "en"
 
@@ -168,7 +170,7 @@ sys.path.insert(0, os.path.abspath('paper'))
 sys.path.insert(0, os.path.abspath('_ext'))
 extensions.append('paper_content')
 # Bibliography configuration (support both locations during migration)
-bibtex_bibfiles = ["paper/paper.bib", "paper.bib"]
+bibtex_bibfiles = ["paper/paper.bib"]
 bibtex_default_style = "unsrtalpha"
 bibtex_reference_style = "author_year"
 
