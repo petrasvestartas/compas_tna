@@ -12,7 +12,7 @@ package = "compas_tna"
 organization = "blockresearchgroup"
 
 master_doc = "index"
-source_suffix = {".rst": "restructuredtext", ".md": "markdown"}
+source_suffix = {".rst": "restructuredtext", ".md": "myst"}
 templates_path = sphinx_compas2_theme.get_autosummary_templates_path()
 exclude_patterns = sphinx_compas2_theme.default_exclude_patterns
 add_module_names = True
@@ -158,8 +158,29 @@ html_permalinks_icon = ""
 html_compact_lists = True
 
 
-extensions += ["sphinxcontrib.bibtex"]
-# optional if you don’t pass the file in the directive:
+extensions += ["sphinxcontrib.bibtex", "myst_parser"]
+
+# Add custom extension path
+import sys
+import os
+sys.path.insert(0, os.path.abspath('_ext'))
+extensions.append('paper_content')
+# Bibliography configuration
 bibtex_bibfiles = ["paper.bib"]
 bibtex_default_style = "unsrtalpha"
 bibtex_reference_style = "author_year"
+
+# MyST configuration
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+]

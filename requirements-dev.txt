@@ -8,5 +8,7 @@ invoke >=0.14
 ruff
 sphinx_compas2_theme
 sphinxcontrib-bibtex
+myst-parser
+linkify
 twine
 wheel

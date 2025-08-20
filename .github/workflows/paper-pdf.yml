@@ -1,7 +1,8 @@
 # Build a production (non-draft) PDF using inara with the -p flag
 name: Paper PDF
-on:
-  workflow_dispatch:
+# on:
+#   workflow_dispatch:
+on: [push]
 
 jobs:
   paper:
@@ -16,7 +17,7 @@ jobs:
         env:
           JOURNAL: joss
         with:
-          args: -p -o pdf paper/paper.md
+          args: -p -o pdf docs/paper.md
 
       - name: Upload
         uses: actions/upload-artifact@v4
