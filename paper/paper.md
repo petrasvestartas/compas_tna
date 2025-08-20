@@ -27,7 +27,7 @@ affiliations:
     index: 2
     ror: 05x2bcf33
 date: 20 August 2025  
-bibliography: paper.bib
+bibliography: ../docs/paper.bib
 ---
 
 # Summary

@@ -7,5 +7,6 @@ compas_viewer
 invoke >=0.14
 ruff
 sphinx_compas2_theme
+sphinxcontrib-bibtex
 twine
 wheel

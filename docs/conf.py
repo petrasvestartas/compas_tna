@@ -156,3 +156,10 @@ html_show_sourcelink = True
 html_permalinks = False
 html_permalinks_icon = ""
 html_compact_lists = True
+
+
+extensions += ["sphinxcontrib.bibtex"]
+# optional if you don’t pass the file in the directive:
+bibtex_bibfiles = ["paper.bib"]
+bibtex_default_style = "unsrtalpha"
+bibtex_reference_style = "author_year"
